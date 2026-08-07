@@ -1,0 +1,15 @@
+name: analytics-events-service
+port: 9102
+lang: python
+description: "analytics-events-service \u2014 domain: ai_agents"
+http_deps:
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- auth.session.started
+- patient.created
+- encounter.ended
+- claim.adjudicated
+- invoice.paid
+- device.reading
