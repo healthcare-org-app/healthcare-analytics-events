@@ -1,7 +1,7 @@
 services:
   analytics-events-service:
     build: .
-    container_name: ${NAME_UNDERSCORE}
+    container_name: analytics_events_service
     depends_on:
       postgres:
         condition: service_healthy
